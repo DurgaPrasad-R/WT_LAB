@@ -14,3 +14,5 @@
 ### Q. 4) Write a PHP program for display all students in CSE using mysql student table.
 
 ### Q. 5) Create a PHP page for login system using session. a) login b) logout
+
+### Q. 7) Write a Node JS program to read and write file system
