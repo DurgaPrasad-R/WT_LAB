@@ -1,52 +1,58 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<style>
-.error {color: #FF0000;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
 </head>
 <body>
-<?php
-// define variables and set to empty values
-$nameErr = $passErr = "";
-$name = $pass = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-if (empty($_POST["name"])) {
-$nameErr = "Name is required";
-} else {
-$name = test_input($_POST["name"]);
-}
-if (empty($_POST["password"])) {
-$passErr = "Password is required";
-} else {
-$pass = test_input($_POST["password"]);
-}
-}
-function test_input($data) {
-$data = trim($data);
-$data = stripslashes($data);
-$data = htmlspecialchars($data);
-return $data;
-}
-?>
-<h2>PHP Form Validation Example</h2>
-<p><span class="error">* required field</span></p>
+    <?php
+    $name_error = $pass_error =  "";
+    $name=$pass = "";
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        if (empty($_POST["name"])){
+            $name_error = "Name is required";
+        } else {
+            $name = test_input($_POST["name"]);
+        }
+        if (empty($_POST["pass"])){
+            $pass_error = "Password is required";
+        } else {
+            $pass = test_input($_POST["pass"]);
+        }
+    }
+    function test_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-Name: <input type="text" name="name">
-<span class="error">* <?php echo $nameErr;?></span>
-<br><br>
-Password: <input type="password" name="password">
-<span class="error">* <?php echo $passErr;?></span>
-<br><br>
-<input type="submit" name="submit" value="Submit">
-</form>
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $pass;
-echo "<br>";
-?>
+    ?>
+    <h2>PHP Form Validation</h2>
+    <p>* indicates that the values need to be added for sure!</p>
+    <form action ="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
+        Enter your username:<br>
+        <input type="text" name="name" placeholder="Enter your name:"> *<br>
+        <span class="error"><?php echo $name_error ?></span><br>
+        Enter your password:<br>
+        <input type="password" name="pass" placeholder="Enter your password:"> *<br>
+        <span class="error"><?php echo $pass_error ?></span>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <h2>Your Input:</h2>
+    <?php
+    if (empty($pass_error) && empty($name_error)){
+        echo "Name:".$name;
+        echo "<br>";
+        echo "Pass:".$pass;
+    }
+    ?>
 </body>
 </html>
