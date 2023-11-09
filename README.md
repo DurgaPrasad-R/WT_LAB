@@ -26,3 +26,9 @@
 ### Q. 10) Write a servlet program to authenticate four users using cookies.
 
 ### Q. 11) Write a servlet that, on entry of a student roll no, displays the full details of that student details (Using student table with roll no, Name, Address, date of birth, course fields).
+
+### Q. 12) Write JSP program to register a student using registration form using student table.
+
+### Q. 13) Write JSP program for authenticating user by his password using login form.
+
+### Q. 14) 14) Create table to store the details of book(book name, price, quantity, amount) and extract data from table and display all books using JSP and JDBC.
