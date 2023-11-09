@@ -24,3 +24,5 @@
 ### Q. 9) Write a servlet program which receives data from HTML forms and respond it. Create one Servlet to retrieve ServletContext Initialization Parameters “which you have given in the web.xml file.
 
 ### Q. 10) Write a servlet program to authenticate four users using cookies.
+
+### Q. 11) Write a servlet that, on entry of a student roll no, displays the full details of that student details (Using student table with roll no, Name, Address, date of birth, course fields).
