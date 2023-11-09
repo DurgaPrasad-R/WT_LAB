@@ -15,7 +15,7 @@
 
 ### Q. 5) Create a PHP page for login system using session. a) login b) logout
 
-### Q. 6) 6) Write a PHP program to connect MySQL
+### Q. 6) Write a PHP program to connect MySQL
 
 ### Q. 7) Write a Node JS program to read and write file system
 
