@@ -20,3 +20,5 @@
 ### Q. 7) Write a Node JS program to read and write file system
 
 ### Q. 8) Write a Node JS program to connect the MongoDB
+
+### Q. 9) Write a servlet program which receives data from HTML forms and respond it. Create one Servlet to retrieve ServletContext Initialization Parameters “which you have given in the web.xml file.
