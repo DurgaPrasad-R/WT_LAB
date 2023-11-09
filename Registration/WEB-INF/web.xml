@@ -1,0 +1,10 @@
+<web-app>
+    <servlet>
+        <servlet-name>RegistrationController</servlet-name>
+        <servlet-class>RegistrationController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegistrationController</servlet-name>
+        <url-pattern>/RegistrationController</url-pattern>
+    </servlet-mapping>
+</web-app>
